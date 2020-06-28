@@ -17,7 +17,13 @@
     "storybook": "start-storybook -p 1212",
     "storybook:export": "build-storybook",
     "generate": "ts-node ./utils/create-component",
+    "lint:check": "eslint .",
     "prepublishOnly": "npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint:check"
+    }
   },
   "peerDependencies": {
     "react": ">=16.13.1",
@@ -39,6 +45,7 @@
     "babel-preset-react-app": "^9.1.2",
     "eslint": "^7.3.1",
     "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.1.0",
     "node-sass": "^4.14.1",

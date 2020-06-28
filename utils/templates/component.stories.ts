@@ -1,13 +1,13 @@
 export default (componentName: string) => ({
-  content: `import React from "react";
-import ${componentName} from "./${componentName}";
+  content: `import React from 'react'
+import ${componentName} from './${componentName}'
 
 export default {
-  title: "${componentName}"
-};
+  title: '${componentName}'
+}
 
-export const WithBar = () => <${componentName} foo="bar" />;
-export const WithBaz = () => <${componentName} foo="baz" />;
+export const WithBar = () => <${componentName} foo="bar" />
+export const WithBaz = () => <${componentName} foo="baz" />
 `,
   extension: `.stories.tsx`,
 })
