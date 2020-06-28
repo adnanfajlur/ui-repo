@@ -1,9 +1,11 @@
 export default (componentName: string) => ({
   content: `import React from 'react'
+import * as knobs from '@storybook/addon-knobs'
 import ${componentName} from './${componentName}'
 
 export default {
-  title: '${componentName}'
+  title: '${componentName}',
+  decorators: [knobs.withKnobs],
 }
 
 export const Preview = () => {

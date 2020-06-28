@@ -17,31 +17,33 @@
     "build:styles:dev": "tailwind build styles/index.scss -o src/main.scss",
     "test": "jest",
     "test:watch": "jest --watch",
+    "check:lint": "eslint .",
     "storybook:export": "build-storybook",
     "generate": "ts-node ./utils/create-component",
-    "lint:check": "eslint .",
     "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint:check"
+      "pre-push": "npm run check:lint"
     }
   },
   "peerDependencies": {
+    "@fullhuman/postcss-purgecss": ">=2.3.0",
+    "postcss-cli": ">=7.1.1",
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
-    "tailwindcss": ">=1.4.6",
-    "postcss-cli": ">=7.1.1",
-    "@fullhuman/postcss-purgecss": ">=2.3.0"
+    "tailwindcss": ">=1.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
+    "@storybook/addon-knobs": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^10.4.3",
+    "@types/classnames": "^2.2.10",
     "@types/jest": "^26.0.3",
     "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
@@ -49,6 +51,7 @@
     "@typescript-eslint/parser": "^3.4.0",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
+    "classnames": "^2.2.6",
     "eslint": "^7.3.1",
     "eslint-plugin-react": "^7.20.0",
     "husky": "^4.2.5",

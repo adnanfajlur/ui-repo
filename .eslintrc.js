@@ -4,22 +4,22 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   extends: [
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
   ],
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'react/prop-types': 0,
     'semi': [2, 'never'],
-    'quotes': [2, 'single', { 'allowTemplateLiterals': true }]
-  }
+    'quotes': [2, 'single', { 'allowTemplateLiterals': true }],
+  },
 }
