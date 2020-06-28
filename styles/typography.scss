@@ -1,0 +1,42 @@
+$font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+
+@mixin font-defaults {
+  font-family: $font-family;
+}
+
+@mixin heading {
+  @include font-defaults;
+
+  font-size: 40px;
+  font-weight: bold;
+}
+
+// Variables
+
+$harvey-black: #131111;
+$harvey-white: #e0e0e0;
+$harvey-red: #ff2323;
+$harvey-green: #005f20;
+$harvey-blue: #070bce;
+
+$primary-50: #e0f2f1;
+$primary-100: #b2dfdb;
+$primary-200: #80cbc4;
+$primary-300: #4db6ac;
+$primary-400: #26a69a;
+$primary-500: #009688;
+$primary-600: #00897b;
+$primary-700: #00796b;
+$primary-800: #00695c;
+$primary-900: #004d40;
+
+$secondary-50: #fff8e1;
+$secondary-100: #ffecb3;
+$secondary-200: #ffe082;
+$secondary-300: #ffd54f;
+$secondary-400: #ffca28;
+$secondary-500: #ffc107;
+$secondary-600: #ffb300;
+$secondary-700: #ffa000;
+$secondary-800: #ff8f00;
+$secondary-900: #ff6f00;

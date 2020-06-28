@@ -1,7 +1,4 @@
-@import "../variables.scss";
-@import "../typography.scss";
+@import "../main.scss";
 
 .foo-bar {
-  @include font-defaults;
-  color: $harvey-green;
 }

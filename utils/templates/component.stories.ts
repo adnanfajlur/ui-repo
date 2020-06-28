@@ -6,8 +6,21 @@ export default {
   title: '${componentName}'
 }
 
-export const WithBar = () => <${componentName} foo="bar" />
-export const WithBaz = () => <${componentName} foo="baz" />
+export const Preview = () => {
+  return (
+    <div className="p-6">
+      <${componentName} foo="Preview" />
+    </div>
+  )
+}
+
+export const Playground = () => {
+  return (
+    <div className="p-6">
+      <${componentName} foo="Playground" />
+    </div>
+  )
+}
 `,
   extension: `.stories.tsx`,
 })

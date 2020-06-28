@@ -2,6 +2,8 @@ node_modules/
 build/
 storybook-static/
 
+src/main.scss
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

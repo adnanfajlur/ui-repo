@@ -1,10 +1,7 @@
 export default () => ({
-  content: `@import "../variables.scss";
-@import "../typography.scss";
+  content: `@import "../main.scss";
 
 .foo-bar {
-  @include font-defaults;
-  color: $harvey-green;
 }
 `,
   extension: `.scss`,
