@@ -5,6 +5,9 @@ module.exports = {
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
   addons: [
     '@storybook/addon-knobs/register',
+    '@storybook/addon-actions/register',
+    '@storybook/addon-storysource',
+    '@storybook/addon-docs'
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
