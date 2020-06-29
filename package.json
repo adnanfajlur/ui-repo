@@ -19,7 +19,7 @@
     "test:watch": "jest --watch",
     "check:lint": "eslint .",
     "storybook:export": "build-storybook",
-    "generate": "ts-node ./utils/create-component",
+    "generate": "ts-node --project tsconfig.common.json ./utils/create-component",
     "prepublishOnly": "npm run build"
   },
   "husky": {
