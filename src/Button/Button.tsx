@@ -1,10 +1,10 @@
 import React from 'react'
-import cn from 'classnames'
+import cn from 'classnames';
 import { ButtonProps } from './Button.types'
 import './Button.scss'
 
 const Button: React.FC<ButtonProps> = ({ variant, color, size, className, children, ...args }) => {
-  const classess = cn('rounded', {
+  let classess = cn('rounded', {
     'py-1 px-2 text-sm': size === 'sm',
     'py-2 px-4 text-base': size === 'md',
     'py-4 px-8 text-lg': size === 'lg',
@@ -19,6 +19,8 @@ const Button: React.FC<ButtonProps> = ({ variant, color, size, className, childr
     'border-2 border-error-500 hover:bg-error-100 text-error-500': variant === 'outlined' && color === 'error',
 
   }, className)
+
+  if (args.disabled) classess += 'gray'
 
   return (
     <button
