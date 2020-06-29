@@ -1,5 +1,5 @@
 import React from 'react'
-import cn from 'classnames';
+import cn from 'classnames'
 import { ButtonProps } from './Button.types'
 import './Button.scss'
 

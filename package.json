@@ -15,17 +15,12 @@
     "build": "npm run build:styles && rollup -c",
     "build:styles": "postcss styles/index.scss -o src/main.scss",
     "build:styles:dev": "tailwind build styles/index.scss -o src/main.scss",
+    "build:story": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
     "check:lint": "eslint .",
-    "storybook:export": "build-storybook",
     "generate": "ts-node --project tsconfig.common.json ./utils/create-component",
     "prepublishOnly": "npm run build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run check:lint"
-    }
   },
   "peerDependencies": {
     "@fullhuman/postcss-purgecss": ">=2.3.0",
