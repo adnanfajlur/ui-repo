@@ -2,10 +2,9 @@ import React from 'react'
 import cn from 'classnames'
 import { ChipProps } from './Chip.types'
 import './Chip.scss'
-
 const Chip: React.FC<ChipProps> = ({ variant, color, size, className, children }) => {
   let classess = cn('rounded-full', {
-    'py-1 px-2 text-xs': size === 'xs',
+    'py-px px-2 text-xs': size === 'xs',
     'py-1 px-2 text-sm': size === 'sm',
     'py-2 px-4 text-base': size === 'md',
     'py-4 px-8 text-lg': size === 'lg',
@@ -32,4 +31,9 @@ const Chip: React.FC<ChipProps> = ({ variant, color, size, className, children }
   )
 }
 
+Chip.defaultProps = {
+  variant: 'default',
+  color: 'default',
+  size: 'md',
+}
 export default Chip
