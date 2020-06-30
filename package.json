@@ -1,18 +1,17 @@
 {
   "name": "ui-repo",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "build/index.js",
-  "module": "build/index.esm.js",
-  "repository": "git@github.com:adnanfajlur/ui-repo.git",
-  "author": "adnanfajlur",
-  "license": "MIT",
   "files": [
     "build"
   ],
   "types": "build/index.d.ts",
+  "repository": "git@github.com:adnanfajlur/ui-repo.git",
+  "author": "adnanfajlur",
+  "license": "MIT",
   "scripts": {
     "dev": "npm run build:styles:dev && start-storybook -p 1212",
-    "build": "npm run build:styles && rollup -c",
+    "build": "rimraf build && npm run build:styles && rollup -c",
     "build:styles": "postcss styles/index.scss -o src/main.scss",
     "build:styles:dev": "tailwind build styles/index.scss -o src/main.scss",
     "build:story": "build-storybook",
@@ -27,7 +26,8 @@
     "postcss-cli": ">=7.1.1",
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
-    "tailwindcss": ">=1.4.6"
+    "tailwindcss": ">=1.4.6",
+    "classnames": ">=2.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
@@ -60,10 +60,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
+    "rimraf": "^3.0.2",
     "rollup": "^2.18.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-typescript2": "^0.27.1",
     "sass-loader": "^8.0.2",
     "tailwindcss": "^1.4.6",

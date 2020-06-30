@@ -22,8 +22,14 @@ fs.mkdirSync(componentDirectory)
 
 const generatedTemplates = templates.map((template) => template(componentName))
 
-generatedTemplates.forEach((template) => {
-  fs.writeFileSync(`${componentDirectory}/${componentName}${template.extension}`, template.content)
+generatedTemplates.forEach((template, i) => {
+  if ([0,1,2,3,4].includes(i)) {
+    fs.writeFileSync(`${componentDirectory}/${componentName}${template.extension}`, template.content)
+  } else if ([5].includes(i)) {
+    fs.writeFileSync(`${componentDirectory}/index${template.extension}`, template.content)
+  } else {
+    console.error(`file ${i} is not mapped for generator`.red)
+  }
 })
 
 console.log(`Successfully created component under: ${componentDirectory.green}`)

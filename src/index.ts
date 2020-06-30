@@ -1,3 +1,4 @@
-import Button from './Button/Button'
-import Chip from './Chip/Chip'
-export { Button }
+import Button from './Button'
+import Chip from './Chip'
+
+export { Button, Chip }
