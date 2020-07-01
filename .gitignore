@@ -3,6 +3,7 @@ build/
 storybook-static/
 
 src/main.scss
+src/main.css
 
 npm-debug.log*
 yarn-debug.log*

@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 import { ChipProps } from './Chip.types'
-import './Chip.scss'
+// import css from './Chip.module.scss'
 
 const Chip: React.FC<ChipProps> = ({ variant, color, size, className, children }) => {
   const classess = cn('rounded-full', {

@@ -1,13 +1,13 @@
 import React from 'react'
 import * as knobs from '@storybook/addon-knobs'
-import { decorate, actions } from '@storybook/addon-actions'
+import { decorate } from '@storybook/addon-actions'
 import Button from './Button'
 
 export default {
   title: 'Button',
   decorators: [knobs.withKnobs]
 }
-const buttonMethod = decorate([args => args.slice(0, 1)]);
+const buttonMethod = decorate([args => args.slice(0, 1)])
 
 export const Preview = () => {
   return (

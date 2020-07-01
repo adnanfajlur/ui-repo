@@ -12,9 +12,9 @@
   "scripts": {
     "dev": "npm run build:styles:dev && start-storybook -p 1212",
     "build": "rimraf build && npm run build:styles && rollup -c",
-    "build:styles": "postcss styles/index.scss -o src/main.scss",
-    "build:styles:dev": "tailwind build styles/index.scss -o src/main.scss",
-    "build:story": "build-storybook",
+    "build:styles": "postcss styles/index.scss -o src/main.css",
+    "build:styles:dev": "tailwind build styles/index.scss -o src/main.css",
+    "build:storybook": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
     "check:lint": "eslint .",
@@ -23,11 +23,11 @@
   },
   "peerDependencies": {
     "@fullhuman/postcss-purgecss": ">=2.3.0",
+    "classnames": ">=2.2.6",
     "postcss-cli": ">=7.1.1",
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
-    "tailwindcss": ">=1.4.6",
-    "classnames": ">=2.2.6"
+    "tailwindcss": ">=1.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

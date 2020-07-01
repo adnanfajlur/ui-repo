@@ -1,7 +1,7 @@
 export default (componentName: string) => ({
   content: `import React from 'react'
 import { ${componentName}Props } from './${componentName}.types'
-import './${componentName}.scss'
+// import css from './${componentName}.scss'
 
 const ${componentName}: React.FC<${componentName}Props> = ({ foo }) => {
   return (

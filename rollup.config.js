@@ -24,13 +24,13 @@ export default {
     resolve(),
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
-    sass({ insert: true }),
+    sass({ insert: true  }),
     copy({
       targets: [
         {
-          src: 'src/main.scss',
+          src: 'src/main.css',
           dest: 'build',
-          rename: 'main.scss',
+          rename: 'main.css',
         },
       ],
     }),
